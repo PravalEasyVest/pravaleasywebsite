@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'blog/Base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <center><div class="date">
+                {{ post.published_date }}
+            </div></center>
+        {% endif %}
+        <center><p style="color: MediumSeaGreen;"><b>Read Time : {{post.readtime}}</b></p></center>
+        <center><h1>{{ post.title }}</h1></center>
+        <img src="{{ post.model_pic.url }}" alt="{{ post.title }}" width="700px" height="400px" style="margin-bottom: 10px;" />
+        <center><p style=" width: 100%">{{ post.text|linebreaksbr }}</p></center>
+
+    </div>
+{% endblock %}

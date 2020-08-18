@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- For Resposive Device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Easyvest</title>
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/fav-icon/logo.png' %}">
+
+
+		<!-- Main style sheet -->
+		<link rel="stylesheet" type="text/css"  href="{% static 'css/style.css' %}">
+		<!-- responsive style sheet -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+
+
+		<!-- Fix Internet Explorer ______________________________________-->
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="vendor/html5shiv.js"></script>
+			<script src="vendor/respond.js"></script>
+		<![endif]-->
+			
+	</head>
+
+	<body>
+		<div class="main-page-wrapper home-page-three">
+
+			<!-- ===================================================
+				Loading Transition
+			==================================================== -->
+			<div id="loader-wrapper">
+				<div id="loader"></div>
+			</div>
+
+
+
+			<div class="html-top-content">
+				<!-- 
+				=============================================
+					Theme Header
+				============================================== 
+				-->
+				<header class="theme-main-header">
+					<div class="container">
+						<div class="menu-wrapper clearfix">
+							<div class="logo float-left"><a href="index.html"><img src= "{% static 'images/logo/Logo1.png' %}" alt="Logo"></a>
+						</div>
+							<ul class="button-group float-right">
+								<li><a href="#" class="tran3s">SIgnup</a></li>
+								<li><a href="#" class="tran3s login">LOGIN</a></li>
+							</ul>
+							
+						</div> <!-- /.menu-wrapper -->
+					</div> <!-- /.container -->
+				</header> <!-- /.theme-main-header -->
+
+
+				<!--
+				=====================================================
+					Theme Main SLider
+				=====================================================
+				-->
+				<div class="partical-bg-wrapper partical-gradient-four  Scamera_overlayer cus-bg">
+					<div class="count-particles">
+	  					<span class="js-count-particles">--</span>
+					</div>
+					<div id="particles-js-three"></div>
+					<div id="theme-main-banner" class="banner-three">
+						<div data-src="{% static 'images/home/slide-transparent.png' %}">
+							<div class="camera_caption">
+								<div class="main-container t-70">
+									<div class="container">
+										<h2 class="wow fadeInUp animated mb-2">For the Indian <br> with a Crore Dreams</h2>
+										
+										
+										<a href="course-2-column.html" class="tran3s wow fadeInLeft animated button-one" data-wow-delay="0.499s"><i class="fa fa-apple" aria-hidden="true"></i>App Store</a>
+									<a href="course-2-column.html" class="tran3s wow fadeInRight animated button-two" data-wow-delay="0.499s"><img src="{% static 'images/icon/2.png' %}" alt="">GooglePlay</a>
+										<div class="image-wrapper wow fadeInUp animated cus1" data-wow-delay="0.75s">
+											<img src="{% static 'images/home/shape-9.png' %}"  alt="">
+										</div>
+									</div> <!-- /.container -->
+								</div> <!-- /.main-container -->
+							</div> <!-- /.camera_caption -->
+						</div>
+						
+					</div> <!-- /#theme-main-banner -->
+				</div> <!-- /.partical-bg-wrapper -->
+				<div class="what-we-do bg mt-15">
+					<div class="container">
+						<div class="theme-title-two1 text-center">
+						
+							<h2>What We Do ?</h2>
+						</div> <!-- /.theme-title-one -->
+
+						<div class="row">
+							<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
+								<div class="single-block tran3s">
+									<img src="{% static 'images/icon/7.png' %}" alt="" class="tran4s">
+									<h6>Tailor Made Portfolios</h6>
+									<p>A portfolio carefully curated to suit your time of investment, risk profile and capital size.</p>
+								
+								</div> <!-- /.single-block -->
+							</div> <!-- /.col- -->
+							<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="2s">
+								<div class="single-block tran3s">
+									<img src="{% static 'images/icon/6.png' %}" alt="" class="tran4s">
+									<h6>Optimise existing equity investments</h6>
+									<p>We'll tweak your equity convictions a little to limit your downside and maximise the upside.</p>
+							
+								</div> <!-- /.single-block -->
+							</div> <!-- /.col- -->
+							<div class="col-md-4 hidden-sm col-xs-12 wow fadeInUp" data-wow-delay="2.150s">
+								<div class="single-block tran3s">
+									<img src="{% static 'images/icon/8.png' %}"alt="" class="tran4s">
+									<h6>Data Driven Research</h6>
+									<p>Evaluation of the key parameters of all 4000+ stocks and their relative scores. Actionable intelligence , not just data.</p>
+									
+								</div> <!-- /.single-block -->
+							</div> <!-- /.col- -->
+						</div> <!-- /.row -->
+					
+					</div> <!-- /.container -->
+				</div> <!-- /.what-we-do -->
+				<div class="boost-your-phone cus9">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 col-xs-12 float-right  wow fadeInRight">
+								<div class="text">
+									<div class="theme-title-two">
+										<h2>Our Investment Framwork</h2>
+										<div class="main-slider-wrapper mt-30">
+											<div class="testimonial-slider">
+												<div class="item">
+													<ul class="ft-22">
+														<li class=""><i class="flaticon-tick"></i>1. Value</li>
+														<p class="pl-45 ">• Evaluate the quality of business , earnings and management. </p>
+														<p class="pl-45 pb-15">• To scrutinise the balance sheet, cash flow statements and P&L account.</p>
+													</ul>
+												</div>
+												<div class="item">
+													<ul class="ft-22">
+														<li><i class="flaticon-tick"></i>2. Outlook</li>
+														<p class="pl-45 pb-15">• Evaluate margin strength,  sustainability and nature of growth to determine the most probable growth model.</p>
+														<p class="pl-45 pb-15">• Scrutinise the data enumerating historical growth.</p>
+													</ul>
+												</div>
+												<div class="item">
+													<ul class="ft-22">
+														<li><i class="flaticon-tick"></i>3. Risk/Reward</li>
+														<p class="pl-45 ">• Model the most probable bottom line improvements to determine upside potential.</p>
+														<p class="pl-45 ">• Eliminate even the best of the businesses if they are not risk reward positive for the client.</p>
+													</ul>
+												</div>
+												<!-- <div class="item">
+													<ul class="ft-22">
+														<li><i class="flaticon-tick"></i> Market Sentiment</li>
+														<p class="pl-45 ">• No brokerage service, only advisory.</p>
+														<p class="pl-45 ">• Execute the trades with your broker of choice.</p>
+													</ul>
+												</div> -->
+												<div class="item">
+													<ul class="ft-22">
+														<li><i class="flaticon-tick"></i>4. Human Bias Free</li>
+														<p class="pl-45 ">• All the above pivots have to be substantiated with reliable data.</p>
+														<p class="pl-45 ">• To automate and not let biases towards or against a particular business hinder returns.</p>
+													</ul>
+												</div>
+											</div> <!-- /.testimonial-slider -->
+										</div> <!-- /.main-slider-wrapper -->
+												
+										<p class="ft-10">The lessons from over two decades of tutelage under Mr.Markets and the learnings amassed from investment literature form the cornerstone of our investment framework. We believe our framework is like a tree which will evolve with uncertainties of the markets but will always be rooted in <b class="text-color-custome">Data, Knowledge and Rationality.</b></p>
+									</div> <!-- /.theme-title-two -->
+									
+								
+							
+								</div>
+							</div>
+						</div>
+						<div class="boster-image-wrapper  wow fadeInLeft">
+							<input type="checkbox" id="ao-toggle" class="ao-toggle" name="ao-toggle">
+							<img src="{% static 'images/home/fram.png' %}" alt="">
+													</div> <!-- /.boster-image-wrapper -->
+					</div> <!-- /.container -->
+				</div> <!-- /.boost-your-phone -->
+				<div class="what-we-do bg">
+					<div class="container">
+						<div class="theme-title-two1 text-center">
+						
+							<h2>Our Algorithm</h2>
+						</div> <!-- /.theme-title-one -->
+
+						<div class="row">
+							<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
+								<div class="single-block tran3s">
+									<img src="{% static 'images/icon/9.png' %}"  alt="" class="tran4s">
+									<h6>Asset Allocation</h6>
+									<p>The algorithm evaluates historical and relative <b class="text-color-custome">valuations</b> of several <b class="text-color-custome">asset</b> classes and allocates your wealth depending upon the risk appetite and capital adequacy.</p>
+								
+								</div> <!-- /.single-block -->
+							</div> <!-- /.col- -->
+							<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="2s">
+								<div class="single-block tran3s">
+									<img src="{% static 'images/icon/10.png' %}" alt="" class="tran4s">
+									<h6>Investible Universe</h6>
+									<p>The algorithm then scans through over <b class="text-color-custome">85 financial data points</b> of each of the listed stocks to eliminate any business without value or having a negative business outlook.</p>
+							
+								</div> <!-- /.single-block -->
+							</div> <!-- /.col- -->
+							<div class="col-md-4 hidden-sm col-xs-12 wow fadeInUp" data-wow-delay="2.50s">
+								<div class="single-block tran3s">
+									<img src="{% static 'images/icon/11.png' %}" alt="" class="tran4s">
+									<h6>Customised Universe</h6>
+									<p>The algorithm then scouts the Investible Universe for businesses that are <b class="text-color-custome">in sync with your risk profile and capital adequacy.</b></p>
+									
+								</div> <!-- /.single-block -->
+							</div> <!-- /.col- -->
+							
+						</div> <!-- /.row -->
+						<div class="row">
+							<div class="col-md-2 hidden-sm col-xs-12 wow fadeInUp" data-wow-delay="2.50s">
+							</div> <!-- /.col- -->
+							<div class="col-md-4 hidden-sm col-xs-12 wow fadeInUp" data-wow-delay="2.50s">
+								<div class="single-block tran3s">
+									<img src="{% static 'images/icon/12.png' %}" alt="" class="tran4s">
+									<h6>Intelligent diversification</h6>
+									<p>The algorithm then allocates capital among stocks in a way that provides you with the most <b class="text-color-custome">favourable risk reward</b> ratio</p>
+									
+								</div> <!-- /.single-block -->
+							</div> <!-- /.col- -->
+							<div class="col-md-4 hidden-sm col-xs-12 wow fadeInUp" data-wow-delay="2.50s">
+								<div class="single-block tran3s">
+									<img src="{% static 'images/icon/13.png' %}"  alt="" class="tran4s">
+									<h6>Monitor</h6>
+									<p>The algorithm then tracks your investments <b class="text-color-custome">24*7</b> to notify you of any opportunity or mishap. This helps you in protecting and growing your wealth.</p>
+									
+								</div> <!-- /.single-block -->
+							</div> <!-- /.col- -->
+						</div>
+					</div> <!-- /.container -->
+				</div> <!-- /.what-we-do -->
+				 <!-- /.boost-your-phone -->
+				
+
+				 <div class="advance-feature">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 boost-your-phone col-xs-12 wow fadeInLeft">
+								<div class="text">
+									<div class="theme-title-two">
+										<h2>Why Not Us ?</h2>
+										<p>We believe it is of paramount importance to inform you what we don’t do so that there is never an “Expectation-Performance” mismatch.</p>
+									</div> <!-- /.theme-title-two -->
+									
+								</div>
+							</div> <!-- /.col- -->
+
+							<div class="col-md-6 col-xs-12 wow fadeInRight">
+								<div class="feature-warpper">
+									<div class="row">
+										<div class="col-xs-6">
+											<div class="single-feature bg-one m-fix js-tilt">
+												<i class="flaticon-diamond"></i>
+												<h5>No speculations</h5>
+												<p>Data builds and supports our conviction. We leave our views for the dinner table. </p>
+											</div>
+											<div class="single-feature bg-two js-tilt">
+												<i class="flaticon-multimedia"></i>
+												<h5>No Equity at any price</h5>
+												<p>We love the returns not the asset class. The valuation of the asset class has to be risk reward positive for our clients.</p>
+											</div>
+										</div>
+										<div class="col-xs-6">
+											<div class="single-feature bg-three js-tilt">
+												<i class="flaticon-squares"></i>
+												<h5>No Long Term Stories</h5>
+												<p>We do not trade but we invest actively. No 10 year myths but clear, definitive steps to navigate the next 10 quarters</p>
+											</div>
+											<div class="single-feature bg-four js-tilt">
+												<i class="flaticon-lock"></i>
+												<h5>No chronicles of turnaround companies</h5>
+												<p>We do not find those one or two miracles which turn 10X or 20X. We believe in continuous and sustainable portfolio performance</p>
+											</div>
+											
+										</div>
+									</div>
+								</div> <!-- /.feature-warpper -->
+							</div>
+						</div> <!-- /.row -->
+					</div> <!-- /.container -->
+				</div> <!-- /.advance-feature -->
+				 		        <!--
+				=====================================================
+					Boost Your Phone
+				=====================================================
+				-->
+				<div class="boost-your-phone cus7">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 col-xs-12 float-right  wow fadeInRight">
+								<div class="text">
+									<div class="theme-title-two">
+										<h2>Why us ?</h2>
+										<p>So that you <b class="text-color-custome">never</b> have to settle for <b class="text-color-custome1">Lack of communication</b> , Long phases of <b class="text-color-custome1">severe underperformance</b> and <b class="text-color-custome1">Long term wealth destruction</b>.We are here to help you on the journey of making your <b class="text-color-custome">first Crore.</b></p>
+									</div> <!-- /.theme-title-two -->
+									<div class="main-slider-wrapper">
+										<div class="testimonial-slider">
+											<div class="item">
+												<ul>
+													<li><i class="flaticon-tick"></i>1. Outperform </li>
+													<p class="pl-45 ">• Companies that fit Easyvest criterion have delivered <b class="text-color-custome">17.5%</b> CAGR return versus 3.1%CAGR  of Nifty returns over the past three years.</p>
+													<p class="pl-45 pb-15">• We outperformed by over <b class="text-color-custome">14%.</b></p>
+												</ul>
+											</div>
+											<div class="item">
+												<ul>
+													<li><i class="flaticon-tick"></i>2. No Minumum Investment</li>
+													<p class="pl-45 pb-15">• Start building your portfolio with as low as <b class="text-color-custome">Rs.5,000</b>.</p>
+													<p class="pl-45 pb-15">• Can't blame the capital size now.</p>
+												</ul>
+											</div>
+											<div class="item">
+												<ul>
+													<li><i class="flaticon-tick"></i>3. Broker Agnostic</li>
+													<p class="pl-45 ">• Execute the trade with brokers of your choice  .</p>
+
+												</ul>
+											</div>
+										</div> <!-- /.testimonial-slider -->
+									</div> <!-- /.main-slider-wrapper -->
+											
+								
+							
+								</div>
+							</div>
+						</div>
+						<div class="boster-image-wrapper  wow fadeInLeft">
+							<input type="checkbox" id="ao-toggle" class="ao-toggle" name="ao-toggle">
+							<img src="{% static 'images/home/graph2.png' %}"  alt="">
+							<!-- <div class="ao-annotations">
+								<span>24*7 portfolio tracking</span>
+								<span>Periodic re-balancing updates</span>
+								<span>Actionable intelligence on stocks</span>
+								<span>Asset allocation</span>
+							</div> -->
+						</div> <!-- /.boster-image-wrapper -->
+					</div> <!-- /.container -->
+				</div> <!-- /.boost-your-phone -->
+
+
+
+		        <!--
+				=====================================================
+					What We Do
+				=====================================================
+				-->
+
+
+
+
+
+				<!--
+				=====================================================
+					Advance Feature
+				=====================================================
+				-->
+				
+					
+				
+
+
+		        <div class="two-section-wrapper">
+		        	<!--
+					=====================================================
+						Testimonial Slider
+					=====================================================
+					-->
+					<div class="testimonial-section">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-8 col-xs-12 float-right wow fadeInUp">
+									<div class="theme-title-one">
+										
+										<h2>Check what people say <br>About us!</h2>
+									</div> <!-- /.theme-title-one -->
+								</div> <!-- /.col- -->
+							</div> <!-- /.row -->
+						</div> <!-- /.container -->
+						<div class="main-bg-wrapper">
+							<div class="overlay">
+								
+								<div class="main-slider-wrapper">
+									<div class="testimonial-slider">
+										<div class="item">
+											<i class="flaticon-straight-quotes"></i>
+											<p>““Two of the best things about Team Easyvest are the constant support plus portfolio monitoring that they provide as also the transparency in terms of queries and fundamental analysis!!!</p>
+											<div class="clearfix">
+												
+												<div class="float-left ">
+													<h6 class="white">Mahavir Bhattacharya</h6>
+													<span class="white">Professor , NMIMS University</span>
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<i class="flaticon-straight-quotes"></i>
+											<p>“It’s exciting to watch my investments perform at astonishing rates. Even beating the market.  I'm extremely delighted with this journey Easyvest has started us on.</p>
+											<div class="clearfix">
+												
+												<div class="float-left">
+													<h6 class="white">Siddharth Sawant</h6>
+													<span class="white">Student , MPSTME</span>
+												</div>
+											</div>
+										</div>
+										
+									</div> <!-- /.testimonial-slider -->
+								</div> <!-- /.main-slider-wrapper -->
+							</div>
+						</div> <!-- /.main-bg-wrapper -->
+					</div> <!-- /.testimonial-section -->
+
+					<!-- 
+					=============================================
+						Pricing Plan Style One
+					============================================== 
+					-->
+					<div class="pricing-plan-section mt-10">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-6 col-xs-12 wow fadeInLeft">
+									<div class="theme-title-one">
+										
+										<h2>Chose your pricing plan</h2>
+										<p>Everything needs a gestation period and we believe it is absolutely cruel to charge during that time. So while you get acquainted with our services, the first <b class="text-color-custome">3 MONTHS are for FREE</b>. We get to be a part of your journey, we believe that in itself is a prize.</p>
+									</div> <!-- /.theme-title -->
+									<ul class="nav nav-tabs pl-14">
+										<li class="active"><a data-toggle="tab" href="#monthly">Monthly</a></li>
+										<li><a data-toggle="tab" href="#yearly">Yearly</a></li>
+									</ul>
+								</div> <!-- /.col- -->
+
+								<div class="col-md-6 col-xs-12 wow fadeInRight">
+									<div class="tab-content">
+										<div class="table-content">
+											<div id="monthly" class="tab-pane price-table in active">
+										    	<div class="col-inner">
+				                                 	<h6>Monthly</h6>
+				                                    <p>Package</p>
+				                                    <strong>₹140</strong>
+				                                    <ul>
+				                                     	<li>Creation of new portfolio</li>
+				                                        <li>24*7 portfolio tracking</li>
+				                                        <li>Optimise existing portfolio</li>
+				                                        <li>Company Insights on all stocks</li>
+				                                    </ul>
+				                                    <a href="#" class="tran3s theme-button"><span></span> Sign up</a>
+				                                </div>
+											</div> <!-- /#monthly -->
+										  	<div id="yearly" class="tab-pane price-table">
+										    	<div class="col-inner">
+													<h6>Yearly</h6>
+				                                    <p>Package</p>
+				                                    <strong>₹1400</strong>
+				                                    <ul>
+				                                     	<li>Creation of new portfolio</li>
+				                                        <li>24*7 portfolio tracking</li>
+				                                        <li>Optimise existing portfolio</li>
+														<li>Company Insights on all stocks</li>
+													</ul>
+				                                    <a href="#" class="tran3s theme-button"><span></span> Sign up</a>
+				                                </div>
+										  	</div> <!-- /#yearly -->
+										</div> <!-- /.table-content -->
+									</div> <!-- /.tab-content -->
+								</div>
+							</div> <!-- /.row -->
+						</div> <!-- /.container -->
+					</div> <!-- /.pricing-plan-section -->
+		        </div> <!-- /.two-section-wrapper -->
+				
+
+
+				<!--
+				=====================================================
+					App ScreenShot
+				=====================================================
+				-->
+
+				<div class="app-screenshot">
+					<h2>View Our App</h2>
+					<div class="screenshot-container">
+						<div class="phone-mockup mt-22"><img src="{% static 'images/home/mobile-mockup.png' %}"alt="" class=""></div>
+						<div class="slider-row">
+							<div class="screenshoot-slider">
+								<div class="item"><img src="{% static 'images/home/apps-1.png' %}" alt=""></div>
+								<div class="item"><img src="{% static 'images/home/apps-2.png' %}" alt=""></div>
+								<div class="item"><img src="{% static 'images/home/apps-3.png' %}" alt=""></div>
+								<div class="item"><img src="{% static 'images/home/apps-4.png' %}" alt=""></div>
+								<div class="item"><img src="{% static 'images/home/apps-3.png' %}" alt=""></div>
+							</div> <!-- /.screenshoot-slider -->
+						</div> <!-- /.row -->
+					</div> <!-- /.screenshot-container -->
+				</div> <!-- /.app-screenshot -->
+				
+
+				<div class="app-screenshot1">
+					<h2>Our trusted partners</h2>
+					<div class="screenshot-container">
+						<div class="phone-mockup"><img src="{% static 'images/home/nmims1.png' %}" alt=""></div>
+					</div>
+					
+				</div> 
+
+				<!--
+				=====================================================
+					Conatct Us
+				=====================================================
+				-->
+				
+				<div class="contact-us-section mt-260">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-5 col-xs-12 pull-right">
+								<address class="contact-address">
+									<div class="theme-title-one">
+										<h6>Contact us</h6>
+										<h2>We'd love to talk. Feel free to reach us at.</h2>
+									</div> <!-- /.theme-title -->
+									<p></p>
+									<a href="#" class="tran3s call">+91 812 851 7406</a>
+									<a href="#" class="tran3s call">praval@theeasyvest.com</a>
+								</address> <!-- /.contact-address -->
+							</div>
+							<div class="col-md-7 col-xs-12">
+								<form action="inc/sendemail.php" class="contact-us-form form-validation" auto-complete="off">
+									<input type="email" placeholder="Email Address*" name="email">
+									<input type="text" placeholder="Subject*" name="sub">
+									<textarea placeholder="Your Message*" name="message"></textarea>
+									<div class="theme-button">
+										<span></span>
+										<input type="submit" value="SEND MESSAGE">
+									</div>
+								</form>
+
+								<!--Contact Form Validation Markup -->
+								<!-- Contact alert -->
+								<div class="alert-wrapper" id="alert-success">
+									<div id="success">
+										<button class="closeAlert"><i class="fa fa-times" aria-hidden="true"></i></button>
+										<div class="wrapper">
+							               	<p>Your message was sent successfully.</p>
+							             </div>
+							        </div>
+							    </div> <!-- End of .alert-wrapper -->
+							    <div class="alert-wrapper" id="alert-error">
+							        <div id="error">
+							           	<button class="closeAlert"><i class="fa fa-times" aria-hidden="true"></i></button>
+							           	<div class="wrapper">
+							               	<p>Sorry!Something Went Wrong.</p>
+							            </div>
+							        </div>
+							    </div> <!-- End of .alert-wrapper -->
+							</div> <!-- /.col- -->
+						</div> <!-- /.row -->
+					</div> <!-- /.container -->
+				</div> <!-- /.contact-us-section -->
+
+
+				<!--
+				=====================================================
+					Google-map
+				=====================================================
+				-->
+				<div class="google-map-area">
+					<div class="container">
+						<div class="map-image-warpper">
+							<img src="{% static 'images/home/map-3.png' %}"  alt="">
+							<div class="placeholder">
+								<img src="{% static 'images/logo/map-placeholder-3.png' %}" alt="">
+								<div class="map-meta-data tran3s">
+									<h6>Valsad Office</h6>
+									<p>304, Dreamland Arcade,<br>Valsad</p><br>
+									<h6>Mumbai Office</h6>
+									<p>AIC NMIMS Incubation Centre,
+										<br>Vile Parle, Mumbai</p>
+								</div>
+							</div>
+							
+						</div> <!-- /.map-image-warpper -->
+					</div>
+				</div> <!-- /.google-map-area -->
+			</div> <!-- /.html-top-content -->
+
+
+
+			<!--
+			=====================================================
+				Footer 
+			=====================================================
+			-->
+			<footer>
+				<div class="container">
+					<div class="footer-data-wrapper">
+						<form action="#" class="subscribe-form">
+							<h2>Subscribe to our Monthly Stock Analysis</h2>
+							<div class="input-wrapper">
+								<div class="row">
+									<div class="col-md-5 col-md-6 col-xs-12">
+										<input type="text" placeholder="Full Name*">
+									</div>
+									<div class="col-md-5 col-md-6 col-xs-12">
+										<input type="email" placeholder="Email Address*">
+									</div>
+									<div class="col-md-2 col-xs-12">
+										<div class="theme-button">
+											<span></span>
+											<input type="submit" value="SIGN UP">
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="bottom-footer">
+							<div class="row">
+								<div class="col-lg-6 col-md-7 col-xs-12 text-right pull-right">
+									<ul class="footer-menu">
+										<li><a href="" class="tran3s">Membership </a></li>
+										<li><a href="blog.html" class="tran3s">Blog</a></li>
+										<li><a href="" class="tran3s">About</a></li>
+										<li><a href="" class="tran3s">Contact</a></li>
+									</ul>
+									<ul class="social-icon">
+										<li><a href="#" class="tran3s"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="tran3s"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="tran3s"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="tran3s"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+								<div class="col-lg-6 col-md-5 col-xs-12 footer-logo">
+									<div class="logo"><a href="index.html"><img src="{% static 'images/logo/logo1.png' %}" alt="Logo"></a></div>
+									<p>All Right Reserved 2020 &copy; <strong>Easyvest.</strong></p>
+								</div>
+							</div> <!-- /.row -->
+						</div> <!-- /.bottom-footer -->
+					</div>
+				</div> <!-- /.container -->
+			</footer>
+
+
+			
+	        <!-- Scroll Top Button -->
+			<button class="scroll-top tran3s color-one-bg">
+				<i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+			</button>
+
+
+
+
+		<!-- Js File_________________________________ -->
+
+		<!-- j Query -->
+		<script type="text/javascript" src="{% static 'vendor/jquery.2.2.3.min.js' %}"></script>
+
+		<!-- Bootstrap JS -->
+		<script type="text/javascript" src="{% static 'vendor/bootstrap/bootstrap.min.js' %}"></script>
+
+		<!-- Vendor js _________ -->
+		<!-- Camera Slider -->
+		<script type='text/javascript' src="{% static 'vendor/Camera-master/scripts/jquery.mobile.customized.min.js' %}"></script>
+	    <script type='text/javascript' src="{% static 'vendor/Camera-master/scripts/jquery.easing.1.3.js' %}"></script> 
+	    <script type='text/javascript' src="{% static 'vendor/Camera-master/scripts/camera.min.js' %}"></script>
+	    <!-- WOW js -->
+		<script type="text/javascript" src="{% static 'vendor/WOW-master/dist/wow.min.js' %}"></script>
+		<!-- Tilt js -->
+		<script type="text/javascript" src="{% static 'vendor/tilt.js/src/tilt.jquery.js' %}"></script>
+		<!-- Fancybox -->
+		<script type="text/javascript" src="{% static 'vendor/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+		<!-- Validation -->
+		<script type="text/javascript" src="{% static 'vendor/contact-form/validate.js' %}"></script>
+		<script type="text/javascript" src="{% static 'vendor/contact-form/jquery.form.js' %}"></script>
+		<!-- partical Js -->
+		<script type="text/javascript" src="{% static 'vendor/particles.js-master/particles.js' %}"></script>
+		<script type="text/javascript" src="{% static 'vendor/particles.js-master/demo/js/lib/stats.js' %}"></script>
+		<script type="text/javascript" src="{% static 'vendor/particles.js-master/demo/js/app.js' %}"></script>
+
+		<!-- owl.carousel -->
+		<script type="text/javascript" src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
+
+		<!-- Theme js -->
+		<script type="text/javascript" src="{% static 'js/theme.js' %}"></script>
+
+		</div> <!-- /.main-page-wrapper -->
+	</body>
+</html>

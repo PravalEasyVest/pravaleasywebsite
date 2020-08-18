@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="EasyVest will help you in better investment.">
+
+        
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/grid.css' %}">
+
+        <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!--<link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">-->
+
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+        <link rel="stylesheet" href="{% static 'css/queries.css' %}">
+
+
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+
+        <style>
+            * {box-sizing: border-box}
+
+            .mySlides {display: none;}
+            .block {
+                display: block;
+            }
+
+            img {vertical-align: middle;}
+
+            /* Slideshow container */
+            .slideshow-container {
+              max-width: 1300px;
+              position: relative;
+              margin : 0 auto;
+
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+              cursor: pointer;
+              position: absolute;
+              top: 50%;
+              width: auto;
+              padding: 16px;
+              margin-top: -50px;
+              color: black;
+              font-weight: bold;
+              font-size: 18px;
+              transition: 0.6s ease;
+              border-radius: 0 3px 3px 0;
+              user-select: none;
+
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+              right: 0;
+              border-radius: 3px 0 0 3px;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+              background-color: rgba(0,0,0,0.8);
+            }
+
+            /* Caption text */
+            .text {
+              color: #000000;
+              font-size: 19px;
+              padding: 8px 12px;
+              position: absolute;
+              bottom: 8px;
+              width: 80%;
+              text-align: justify-all;
+              margin-left: 450px;
+              margin-bottom: 100px;
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+              color: #f2f2f2;
+              font-size: 12px;
+              padding: 8px 12px;
+              position: absolute;
+              top: 0;
+            }
+            .dot {
+              cursor: pointer;
+              height: 15px;
+              width: 15px;
+              margin: 0 2px;
+              background-color: MediumSeaGreen;
+              border-radius: 50%;
+              display: inline-block;
+              transition: background-color 0.6s ease;
+            }
+
+            .active, .dot:hover {
+                background-color: white;
+               /*background-image: url('slide.jpg');*/
+
+            }
+            .dot:hover {
+                background-color: lightgreen;
+               /*background-image: url('slide.jpg');*/
+
+            }
+
+            /* Fading animation */
+            .fade {
+              -webkit-animation-name: fade;
+              -webkit-animation-duration: 1.5s;
+              animation-name: fade;
+              animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+              from {opacity: .4}
+              to {opacity: 1}
+            }
+
+            @keyframes fade {
+              from {opacity: .4}
+              to {opacity: 1}
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+              .prev, .next,.text {font-size: 11px}
+            }
+
+
+
+
+            /* For Card Flip*/
+            .flip-card {
+              background-color: transparent;
+              width: 300px;
+              height: 370px;
+              perspective: 1000px;
+              float:left;
+              margin-left: 30px;
+            }
+
+            .flip-card-inner {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              text-align: left;
+
+              transition: transform 0.6s;
+              transform-style: preserve-3d;
+              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+            }
+
+            .flip-card:hover .flip-card-inner {
+              transform: rotateY(180deg);
+            }
+
+            .flip-card-front, .flip-card-back {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+            }
+
+            .flip-card-front {
+              background-color: #bbb;
+              color: black;
+            }
+
+            .flip-card-back {
+              background-color: MediumSeaGreen;
+              color: white;
+              transform: rotateY(180deg);
+            }
+
+            /*Text fade*/
+            @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+            .word {
+              position: absolute;
+              width: 310px;
+              opacity: 0;
+            }
+
+            .letter {
+              display: inline-block;
+              position: relative;
+              float: left;
+              transform: translateZ(25px);
+              transform-origin: 50% 50% 25px;
+            }
+
+            .letter.out {
+              transform: rotateX(90deg);
+              transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            }
+
+            .letter.behind {
+              transform: rotateX(-90deg);
+            }
+
+            .letter.in {
+              transform: rotateX(0deg);
+              transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+
+
+
+            .green {
+              color: #16a085;
+            }
+
+            /* Sign Up Effect*/
+            * {box-sizing: border-box;}
+
+            /* Full-width input fields */
+            input[type=text]{
+              width: 100%;
+              /*padding: 10px;
+              margin: 5px 0 22px 0;
+              display: inline-block;
+              border: none;
+              background: #f1f1f1;*/
+
+              width: 100%;
+              padding: 7px;
+              border-radius: 3px;
+              border: 1px solid #ccc;
+            }
+
+            /* Add a background color when the inputs get focus */
+            input[type=text]:focus {
+              background-color: #ddd;
+              outline: none;
+            }
+
+            /* Set a style for all buttons */
+            button {
+              background-color: #4CAF50;
+              color: white;
+              padding: 14px 10px;
+              margin: 8px 0;
+              border: none;
+              cursor: pointer;
+              width: 100%;
+              opacity: 0.9;
+            }
+
+            button:hover {
+              opacity:1;
+            }
+
+            /* Extra styles for the cancel button */
+            .cancelbtn {
+              padding: 14px 20px;
+              background-color: #f44336;
+            }
+
+            /* Float cancel and signup buttons and add an equal width */
+            .cancelbtn, .signupbtn {
+              float: left;
+              width: 50%;
+            }
+
+            /* Add padding to container elements */
+            .container {
+              padding: 16px;
+            }
+
+            /* The Modal (background) */
+            .modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              left: 50%;
+              top: 50%;
+              -ms-transform: translate(-50%,-50%);
+              -moz-transform:translate(-50%,-50%);
+              -webkit-transform: translate(-50%,-50%);
+              transform: translate(-50%,-50%);
+              width: 425px; /* Full width */
+              height: 450px; /* Full height */
+              background-color: #5cb397;
+              padding-top: 50px;
+
+            }
+
+            /* Modal Content/Box */
+            .modal-content {
+              background-color: #fefefe;
+              margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+              border: 1px solid #888;
+              width: 90%; /* Could be more or less, depending on screen size */
+            }
+
+            /* Style the horizontal ruler */
+            hr {
+              border: 1px solid #f1f1f1;
+              margin-bottom: 25px;
+            }
+
+            /* The Close Button (x) */
+            .close {
+              position: absolute;
+              right: 35px;
+              top: 15px;
+              font-size: 40px;
+              font-weight: bold;
+              color: #f1f1f1;
+            }
+
+            .close:hover,
+            .close:focus {
+              color: #f44336;
+              cursor: pointer;
+            }
+
+            /* Clear floats */
+            .clearfix::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+
+            /* Change styles for cancel button and signup button on extra small screens */
+            @media screen and (max-width: 300px) {
+              .cancelbtn, .signupbtn {
+                 width: 100%;
+              }
+            }
+        </style>
+        <title>EasyVest</title>
+
+
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="row">
+                    <img src="{% static 'img/easy.jpg' %}" alt="EasyVest logo" class="logo">
+
+                    <!--<img src="resources/img/logo.png" alt="Omnifood logo" class="logo-black">-->
+                    <ul class="main-nav js--main-nav">
+
+                        <li style="font-weight: bolder;"><a href="#aboutus">About Us</a></li>
+                        <li style="font-weight: bolder;"><a href="#features">WHY US?</a></li>
+                        <li style="font-weight: bolder;"><a href="#featuress">How it works</a></li>
+                        <li style="font-weight: bolder;"><a href="#corevalues">Our Core Values</a></li>
+                        <li style="font-weight: bolder;"><a href="#ourteam">Our Team</a></li>
+                        <li style="font-weight: bolder;"><a href="#contact">Contact</a></li>
+                        <li style="font-weight: bolder;"><a href="http://www.theeasyvest.com/blog">Blog</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+
+                    <div id="id01" class="modal">
+                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      <form method="post" class="modal-content" action>
+                          {% csrf_token %}
+                        <div class="container">
+
+                          <p style="font-size:20px; margin-bottom: 20px"><b>Subscribe to our <a href="http://www.theeasyvest.com/blog"><b style="color: #4CAF50">blog</b></a> post and be the first to know of our product launch.</b></p>
+
+                          <p style="font-size:20px;"><b>Don't worry. We won't spam you.</b></p>
+                          <hr>
+                          <label for="email"><b>Email</b></label>
+                          <input type="text" placeholder="Enter Email" name="email2" required>
+
+
+                          <div class="clearfix">
+                            <!--<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>-->
+                            <button type="submit" onclick="document.getElementById('demo').innerHTML = 'Thank You for Signing Up!'" class="signupbtn">Sign Up</button>
+                          </div>
+                          <p id="demo" style="color: #4CAF50;margin-left: 10px"></p>
+                        </div>
+                      </form>
+                    </div>
+
+                </div>
+            </nav>
+
+
+        </header>
+        <section class="section-steps js--section-features">
+            <div class="row">
+                <div class="col span-1-of-2">
+
+                        <h3><b>Trading made&nbsp<br><span class="word green">Consistently&ensp;profitable</span><span class="word green">Simple</span><span class="word green">Systematic</span></b></h3><h4 style="font-weight: bolder; color: grey;"><br>Strategies developed by our<br>SEBI registered partner advisors.</h4>
+                        <a class="btn btn-full js--scroll-to-plans" href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</a>
+
+                </div>
+                <div class="col span-1-of-2">
+                    <img src="{% static 'img/social.png' %}" width="340px" height="340px"   style="margin-top: -12px">
+                </div>
+            </div>
+        </section>
+        <section class="section-steps" id="aboutus">
+            <div class="row">
+                <h2>ABOUT US</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-2 steps-box">
+                    <img src="{% static 'img/design-powers-power-launch-white.png' %}" alt="Easy Vest on iPhone" class="app-screen js--wp-2">
+                </div>
+                <div class="col span-1-of-2 steps-box">
+                    <div class="works-step clearfix">
+                        <div><i class="ion-ios-people-outline"></i></div>
+                        <p><b style="color: gray; font-size: 22px;">Simple</b></p>
+                    </div>
+                    <div class="works-step clearfix">
+                        <div><i class="ion-ios-analytics-outline"></i></div>
+                        <p><b style="color: gray; font-size: 22px;">Trustworthy</b></p>
+                    </div>
+                    <div class="works-step clearfix">
+                        <div><i class="ion-ios-keypad-outline"></i></div>
+                        <p><b style="color: gray; font-size: 22px;">Consistent</b></p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-features js--section-features" id="features">
+            <div class="row">
+                <h2>WHY US?</h2>
+            </div>
+
+        </section>
+
+            <div class="slideshow-container active" style="margin-bottom: 30px;">
+
+                    <div class="mySlides fade block">
+                      <div class="numbertext">1 / 6</div>
+
+                        <center><img src="{% static 'img/StrategyReturns.png' %}"  style="width:400px ;height:300px; margin-bottom: 15px;padding-right: 10px;padding-left: 10px;"></center>
+
+                        <center><h3 style="margin-bottom: 15px; font-size: 25px"><b>Superior returns</b></h3></center>
+
+
+                                <center><p style="font-weight: bolder; color: grey;"><span style="font-size: 20px;">Rs.100, 000 invested over 5.66 years would have turned into Rs.450, 000.</span></p></center>
+
+
+
+                    </div>
+
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 6</div>
+                      <center><img src="{% static 'img/ConsistencyofReturns.png' %}" style="width:420px ;height:300px; margin-bottom: 10px;padding-left: 10px;"></center>
+
+                          <center><h3 style="margin-bottom: 15px; font-size: 25px"><b>Consistency of returns</b></h3></center>
+
+
+                              <center><p style="margin-bottom: 10px;font-weight: bolder; color: grey;"><span style="font-size: 20px;">Majority of the “risk free” investment avenues have delivered negative returns over the past two years.</span></p></center>
+                              <center><p style="margin-bottom: 10px;font-weight: bolder; color: grey;"> <span style="font-size: 20px;">Our strategy in the same period has delivered returns in excess of 14% during the same time.</span></p></center>
+                              <center><p style="font-weight: bolder; color: grey;"><span style="font-size: 20px;">This speaks of the resilience of our trading methodology.</span></p></center>
+
+
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 6</div>
+                        <center><img src="{% static 'img/minimumrisk.png' %}" style="width:350px ;height:280px; margin-bottom: 10px;padding-right: 10px;padding-left: 10px;"></center>
+
+                        <center><h3 style="margin-bottom: 15px; font-size: 25px"><b>Minimum Risks</b></h3></center>
+
+
+                              <center><p style="margin-bottom: 10px;font-weight: bolder; color: grey;"><span style="font-size: 20px;">While no return is risk free,it is how efficiently you manage this risk that differentiates a successful investor from the rest.</span></p></center>
+                              <center><p style="margin-bottom: 10px;font-weight: bolder; color: grey;"> <span style="font-size: 20px;">Our strategy has seen limited downside to 20% in the last 10 years.</span></p></center>
+
+
+
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 6</div>
+                        <center><img src="{% static 'img/costeffective.png' %}" style="width:400px ;height:300px; margin-bottom: 10px;padding-right: 10px;padding-left: 10px;"></center>
+
+                        <center><h3 style="margin-bottom: 15px; font-size: 25px"><b>Cost effective</b></h3></center>
+
+
+                              <center><p style="margin-bottom: 10px;font-weight: bolder; color: grey;"><span style="font-size: 20px;">Mutual funds charge over 1% as management fees.</span></p></center>
+                              <center><p style="margin-bottom: 10px;font-weight: bolder; color: grey;"> <span style="font-size: 20px;">We charge only a convenience fee of as low as Rs. 100 per month.</span></p></center>
+                              <center><p style="margin-bottom: 10px;font-weight: bolder; color: grey;"> <span style="font-size: 20px;">Over a period of time,you end up saving a ton of money at Easyvest.</span></p></center>
+
+
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 6</div>
+                        <center><img src="{% static 'img/simpletouse.png' %}" style="width:350px ;height:250px; margin-bottom: 10px;padding-right: 10px;padding-left: 10px;"></center>
+
+                        <center><h3 style="margin-bottom: 15px; font-size: 25px"><b>Simple to use</b></h3></center>
+
+                              <center><p style="margin-bottom: 10px;font-weight: bolder; color: grey;"><span style="font-size: 20px;">Receive clear entry and exit rules a day in advance.</span></p></center>
+                              <center><p style="margin-bottom: 10px;font-weight: bolder; color: grey;"> <span style="font-size: 20px;">You get an exceptionally high return on time since you don't spend more than 8 minutes a day.</span></p></center>
+
+
+
+                    </div>
+
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 6</div>
+                        <center><img src="{% static 'img/customemade.png' %}" style="width:400px ;height:300px; margin-bottom: 10px;padding-right: 10px;padding-left: 10px;"></center>
+
+                        <center><h3 style="margin-bottom: 15px; font-size: 25px"><b>Custom Made</b></h3></center>
+
+
+                            <center><p style="margin-bottom: 10px;font-weight: bolder; color: grey;"><span style="font-size: 20px;">We understand that one suit does not fit all and hence our entire process is custom made for,every client and their trading style.</span></p></center>
+
+
+
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+                <br>
+
+                <div class="dotactive" style="text-align:center; margin-bottom: 50px;">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                  <span class="dot" onclick="currentSlide(4)"></span>
+                  <span class="dot" onclick="currentSlide(5)"></span>
+                  <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+
+
+
+        <section class="section-features js--section-features" id="featuress" style="margin-bottom: 50px;">
+            <div class="row">
+                <h2 >How it Works</h2>
+
+            </div>
+
+            <div class="row js--wp-1">
+                <div class="col span-1-of-4 box">
+                    <i class="ion-ios-body-outline icon-big"></i>
+
+                    <h5 style="margin-bottom: 20px; font-size: 22px;">Understanding You</h5>
+                    <p style="font-weight: bolder; color: grey">Answer a few simple questions and we will recommend a trading style best suited for you.</p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <i class="ion-ios-medical-outline icon-big"></i>
+                    <h5 style="margin-bottom: 20px; font-size: 22px;">Know your Strategy</h5>
+                    <p style="font-weight: bolder; color: grey">View information such as 5 year growth rate, maximum historical downside and percentage of profitable trades.</p>                </div>
+                <div class="col span-1-of-4 box">
+                    <i class="ion-ios-navigate-outline icon-big"></i>
+                    <h5 style="margin-bottom: 20px; font-size: 22px;">Trade Alerts</h5>
+                    <p style="font-weight: bolder; color: grey">You will receive a notification for the details of trade a day in advance. It will consist of vital information such as Number of shares to be bought and the buy price.</p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <i class="ion-ios-book-outline icon-big"></i>
+                    <h5 style="margin-bottom: 20px; font-size: 22px;">Updating Trade Log</h5>
+                    <p style="font-weight: bolder; color: grey">After every trade, just answer 4 simple questions and help us monitor any lapses in your trading activity.</p>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <section class="section-testimonials" id="corevalues">
+            <div class="row">
+                <h2>Our Core Values</h2>
+                <p style="font-weight: bolder; color: grey;">"It takes years to build reputation and minutes to destroy it. If you understand this, you’ll do things differently."- Warren Buffet</p>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <blockquote>
+                        <h3 style="font-weight: bolder;color: MediumSeaGreen">Profitability</h3>
+                        To generate maximum return for our clients.
+
+                    </blockquote>
+                </div>
+                <div class="col span-1-of-3">
+                    <blockquote>
+                        <h3 style="font-weight: bolder;color: MediumSeaGreen">Reliability</h3>
+                        To have a strong focus on processes to ensure sustainability.
+                    </blockquote>
+                </div>
+                <div class="col span-1-of-3">
+                    <blockquote>
+                        <h3 style="font-weight: bolder;color: MediumSeaGreen">Customer First</h3>
+                        To design and deliever every service to our customer's delight.
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-testimonials-second" id="ourteam">
+            <div class="row">
+                <h2>Our Team</h2>
+            </div>
+
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <div class="flip-card"  style="padding-bottom: 10px;padding-top: 10px;">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="{% static 'img/praval.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+                          <cite style="font-size: 15px;text-align: center;padding-bottom: 65px;"><b style="margin-left: 10px">Praval Shah</b></cite>
+                        </div>
+                        <div class="flip-card-back">
+                          <b style="padding-left: 7px; padding-top: 14px;">Experience</b>: 3 years
+                          <br><b style="padding-left: 7px;">Qualification</b>: MBA Tech (Mechanical) student at NMIMS University
+                          <br><b style="padding-left: 7px;">Favourite Quote</b>: “Rule number 1: Don’t lose money, Rule number 2 : Never forget rule number 1”
+                          <br><b style="padding-left: 7px;">Favourite Book</b>: Zero to One by Peter Thiel and “The Warren Buffet Way” by Robert Hagstrom
+                          <br><b style="padding-left: 7px;">Most Important Value</b>: Credibility
+                          <br><b style="padding-left: 7px;">Business principle</b>: Clients first
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col span-1-of-3">
+                    <div class="flip-card"  style="padding-bottom: 10px;padding-top: 10px;">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="{% static 'img/hardik.jpeg' %}"  alt="Avatar" style="width:300px;height:300px;">
+                          <cite style="font-size: 15px;text-align: center;padding-bottom: 65px;"><b>Hardik Upadhyay</b></cite>
+                        </div>
+                        <div class="flip-card-back">
+                          <b style="padding-left: 7px;padding-top: 14px;">Experience</b>: 15 years
+                         <br><b style="padding-left: 7px;">Qualification</b>: Affiliate member of the CMT Association, USA
+                         <br><b style="padding-left: 7px;">Favourite Quote</b>: “See the trade, take the trade”
+                         <br><b style="padding-left: 7px;">Favourite Book</b>: Street Smarts by Linda Raschke & Larry Connors
+                         <br><b style="padding-left: 7px;">Most Important Value</b>: Transparency
+                         <br><b style="padding-left: 7px;">Strategy principle</b>: Wealth creation
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col span-1-of-3">
+                    <div class="flip-card" style="padding-bottom: 10px;padding-top: 10px;">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="{% static 'img/prashant.jpeg' %}"  alt="Avatar" style="width:300px;height:300px;">
+                          <cite style="font-size: 15px; text-align: center;padding-bottom: 65px;"><b>Prashant Barwalia</b></cite>
+                        </div>
+                        <div class="flip-card-back">
+                          <b style="padding-left: 7px;padding-top: 14px;">Experience</b>: 16 years
+                        <br><b style="padding-left: 7px;">Qualification</b>: Masters in Business Economics
+                        <br><b style="padding-left: 7px;">Favourite Quote</b>: “It is Process, Perseverance and Patience that makes a successful investor”
+                        <br><b style="padding-left: 7px;">Favourite Book</b>: Intelligent Investor by Benjamin Graham and The Alchemy of Finance by George Soros
+                        <br><b style="padding-left: 7px;">Most important value</b>: Integrity
+                        <br><b style="padding-left: 7px;">Strategy principle</b>: Sustainable returns
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="section-form" id="contact">
+            <div class="row">
+                <h2>We're happy to hear from you</h2>
+            </div>
+            <div class="row">
+                <form method="post"  class="contact-form" action>
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name" style="font-weight: bolder; color: grey;">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email" style="font-weight: bolder; color: grey;">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="contactno" style="font-weight: bolder; color: grey;">Contact No.</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="contactno" name="contactno" id="contactno" placeholder="Your Contact No." required>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label style="font-weight: bolder; color: grey;">Drop us a line</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Send it!">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="#aboutus">About us</a></li>
+                        <li><a href="http://www.theeasyvest.com/blog">Blog</a></li>
+
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    Copyright &copy; 2019 by EasyVest. All rights reserved.
+                </p>
+                <p style="margin-left: 870px">
+                    Powered by &copy; RBT Algo Systems LLP.
+                </p>
+            </div>
+        </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+
+
+
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+
+    <script src= "{% static 'js/script.js' %}"></script>
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61026110-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+          'use strict';
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          'use strict';
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          'use strict';
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+
+              slides[i].style.display = "none";
+
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" dotactive", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " dotactive";
+
+
+
+        }
+    </script>
+    <script>
+        var words = document.getElementsByClassName('word');
+        var wordArray = [];
+        var currentWord = 0;
+
+        words[currentWord].style.opacity = 1;
+        for (var i = 0; i < words.length; i++) {
+          splitLetters(words[i]);
+        }
+
+        function changeWord() {
+          var cw = wordArray[currentWord];
+          var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+          for (var i = 0; i < cw.length; i++) {
+            animateLetterOut(cw, i);
+          }
+
+          for (var i = 0; i < nw.length; i++) {
+            nw[i].className = 'letter behind';
+            nw[0].parentElement.style.opacity = 1;
+            animateLetterIn(nw, i);
+          }
+
+          currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+        }
+
+        function animateLetterOut(cw, i) {
+          setTimeout(function() {
+                cw[i].className = 'letter out';
+          }, i*80);
+        }
+
+        function animateLetterIn(nw, i) {
+          setTimeout(function() {
+                nw[i].className = 'letter in';
+          }, 340+(i*80));
+        }
+
+        function splitLetters(word) {
+          var content = word.innerHTML;
+          word.innerHTML = '';
+          var letters = [];
+          for (var i = 0; i < content.length; i++) {
+            var letter = document.createElement('span');
+            letter.className = 'letter';
+            letter.innerHTML = content.charAt(i);
+            word.appendChild(letter);
+            letters.push(letter);
+          }
+
+          wordArray.push(letters);
+        }
+
+        changeWord();
+        setInterval(changeWord, 4000);
+
+    </script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+
+    </script>
+
+    </body>
+
+</html>
+
+

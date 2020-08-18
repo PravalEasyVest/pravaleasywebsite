@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'blog/Base.html' %}
+
+{% block content %}
+    {% for post in contacts %}
+        <div class="post">
+            <center><div class="date">
+                {{ post.published_date }}
+            </div></center>
+            <center><p style="color: MediumSeaGreen;"><b>Read Time : {{post.readtime}}</b></p></center>
+            <center><h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1></center>
+            <center><img src="{{ post.model_pic.url }}" alt="{{ post.title }}" width="700px" height="400px" style="margin-bottom: 10px;"/></center>
+
+        </div>
+    {% endfor %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if contacts.has_previous %}
+
+                <a href="?page={{ contacts.previous_page_number }}" style="font-size: 20px;">&laquo; Previous</a>
+            {% endif %}
+
+
+                {% for num in contacts.paginator.page_range %}
+                  {% ifequal num contacts.number %}
+                    <span class="current" style="font-size: 20px;"><b>{{ num }}</b></span>
+                  {% else %}
+                    <a href="?page={{ num }}" style="font-size: 20px;"> {{ num }}</a>
+                  {% endifequal %}
+                {% endfor %}
+
+
+            {% if contacts.has_next %}
+                <a href="?page={{ contacts.next_page_number }}" style="font-size: 20px;">Next &raquo;</a>
+
+            {% endif %}
+        </span>
+    </div>
+{% endblock %}
